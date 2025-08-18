@@ -1,5 +1,7 @@
 "use client";
 
+import FruitList from "@/components/fruit-list";
+
 export default function Blog() {
     const fruits = ["Apple", "Banana", "Orange"];
 
@@ -20,12 +22,8 @@ export default function Blog() {
 
     <p>This is loop render:</p>
 
-    <ul>
-        {fruits.map((fruit, index) => (
-        <li key={index}>{fruit}</li>
-        ))}
-    </ul>
-
+    <FruitList fruits={fruits} />
+    
     <p>Conditional rendering ternary</p>
 
     {isLoggedIn ? 'anda telah login' : 'and belum login'}
