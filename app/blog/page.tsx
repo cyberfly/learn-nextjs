@@ -1,6 +1,7 @@
 import FruitList from "@/components/fruit-list";
 import ConditonalRendering from "@/components/conditional-render";
 import BasicEvent from "@/components/basic-event";
+import Counter from "@/components/counter";
 
 export default function Blog() {
   const fruits = ["Apple", "Banana", "Orange"];
@@ -24,6 +25,8 @@ export default function Blog() {
       <ConditonalRendering isLoggedIn={isLoggedIn} showMessage={showMessage} />
 
       <BasicEvent />
+
+      <Counter />
     </>
   );
 }
