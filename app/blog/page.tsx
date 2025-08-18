@@ -1,42 +1,29 @@
-"use client";
-
 import FruitList from "@/components/fruit-list";
+import ConditonalRendering from "@/components/conditional-render";
+import BasicEvent from "@/components/basic-event";
 
 export default function Blog() {
-    const fruits = ["Apple", "Banana", "Orange"];
+  const fruits = ["Apple", "Banana", "Orange"];
 
-    const isLoggedIn = true;
+  const isLoggedIn = true;
 
-    const showMessage = false;
+  const showMessage = false;
 
-    const handleClick = () => {
-        alert("button clicked!");
-    };
+  return (
+    <>
+      <h1>Blog Page</h1>
+      <p>This is blog post:</p>
 
-    return (<>
-    <h1>Blog Page</h1>
-    <p>This is blog post:</p>
+      <a href="/blog/1">Blog post 1</a>
+      <a href="/blog/2">Blog post 2</a>
 
-    <a href="/blog/1">Blog post 1</a>
-    <a href="/blog/2">Blog post 2</a>
+      <p>This is loop render:</p>
 
-    <p>This is loop render:</p>
+      <FruitList fruits={fruits} />
 
-    <FruitList fruits={fruits} />
-    
-    <p>Conditional rendering ternary</p>
+      <ConditonalRendering isLoggedIn={isLoggedIn} showMessage={showMessage} />
 
-    {isLoggedIn ? 'anda telah login' : 'and belum login'}
-
-    <p>Conditional rendering using AND</p>
-
-    {showMessage && (
-        <p>Ini adalah mesej</p>
-    )}
-
-    <p>Event handling</p>
-
-    <button type="button" onClick={handleClick} >Test Button</button>
-
-    </>);
+      <BasicEvent />
+    </>
+  );
 }
