@@ -3,8 +3,26 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
 
+interface IUser {
+  id: number;
+  firstName: string;
+  lastName: string;
+  maidenName: string;
+  age: number;
+  gender: string;
+  email: string;
+  phone: string;
+  username: string;
+  password: string;
+  birthDate: string;
+  image: string;
+  bloodGroup: string;
+  height: number;
+  weight: number;
+}
+
 const UserList = () => {
-  const [users, setUsers] = useState([]);
+  const [users, setUsers] = useState<IUser[]>([]);
 
   useEffect(() => {
     fetch("https://dummyjson.com/users")
@@ -26,7 +44,11 @@ const UserList = () => {
 
       <ul>
         {users.map((user, index) => (
-          <li key={index}>{user.firstName} {user.lastName} - {user.age}</li>
+          <li key={index}>
+            
+            {user.firstName} {user.lastName} - {user.age} - {user.phone}
+            <img src={user.image} alt="" />    
+        </li>
         ))}
       </ul>
     </>
