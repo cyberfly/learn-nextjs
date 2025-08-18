@@ -2,24 +2,7 @@
 
 import * as React from "react";
 import { useState, useEffect } from "react";
-
-interface IUser {
-  id: number;
-  firstName: string;
-  lastName: string;
-  maidenName: string;
-  age: number;
-  gender: string;
-  email: string;
-  phone: string;
-  username: string;
-  password: string;
-  birthDate: string;
-  image: string;
-  bloodGroup: string;
-  height: number;
-  weight: number;
-}
+import { IUser } from "@/libs/types";
 
 const UserList = () => {
   const [users, setUsers] = useState<IUser[]>([]);
