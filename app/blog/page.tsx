@@ -3,6 +3,7 @@ import ConditonalRendering from "@/components/conditional-render";
 import BasicEvent from "@/components/basic-event";
 import Counter from "@/components/counter";
 import ToggleComp from "@/components/toggle";
+import UserList from "@/components/user-list";
 
 export default function Blog() {
   const fruits = ["Apple", "Banana", "Orange"];
@@ -30,6 +31,8 @@ export default function Blog() {
       <Counter />
 
       <ToggleComp/>
+
+      <UserList />
     </>
   );
 }
